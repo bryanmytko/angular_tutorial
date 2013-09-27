@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="js/angular.js"></script>
+    <script src="js/todo.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h2>@TODO</h2>
+    <div ng-controller="todoCtrl">
+      <span>{{remaining()}} of {{todos.length}}</span>
+      [ <a href="" ng-click="archive()">archive</a> ]
+      <ul class="unstyled">
+        <li ng-repeat="todo in todos">
+					<input type="checkbox" ng-model="todo.done">
+					<span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+			<form ng-submit="addTodo()">
+				<input type="text" ng-model="todoText" size="30" placeholder="add new @todo here..." />
+				<input type="submit" class="btn-primary" value="add" />
+			</form>
+		</div>
+    <div ng-controller="monsters">
+      <h3 style="color:#f00;">OMG {{getFruit()}}</h3>
+    </div>
+  </body>
+</html>

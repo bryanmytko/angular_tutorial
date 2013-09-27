@@ -1,0 +1,27 @@
+<!doctype html>
+<style>
+ul#input { list-style-type: none }
+ul#input li { display: inline }
+ul li input { width: 20px; font-size: 15px }
+</style>
+<html ng-app>
+  <head>
+    <script src="js/angular.js"></script>
+    <script src="js/words.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+		<div ng-controller="Words">
+			<ul id="input">
+				<li>
+					<input type="text" ng_model="letter_1" class="letter" />
+					<input type="text" ng_model="letter_2" class="letter" />
+					<input type="text" ng_model="letter_3" class="letter" />
+				</li>
+			</ul>
+      <ul>
+      {{letter_1}} {{letter_2}} {{letter_3}}
+      </ul>
+		</div>
+  </body>
+</html>

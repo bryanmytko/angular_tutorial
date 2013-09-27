@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="components">
+  <head>
+    <script src="js/angular.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/juice.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <tabs> <!-- so cool... extedned HTML vocabulary -->
+      <pane title="localization">
+        Date: {{ '2012-04-01' | date: 'fullDate' }}<br />
+        Currency: {{ 123456 | currency }}<br />
+        Number: {{ 98765.4321 | number }}<br />
+      </pane>
+      <pane title="hello">
+        <h3>Yes, hello.</h3>
+      </pane>
+      <pane title="pluralization">
+        <div ng-controller="juiceCounter">
+          <div ng-repeat="b in juices">
+            <ng-pluralize count="b" when="juiceForms"></ng-pluralize>
+          </div>
+        </div>
+      </pane>
+    </tabs>
+  </body>
+</html>

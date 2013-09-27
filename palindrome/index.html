@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="angular.js"></script>
+    <script src="ctrl.js"></script>
+    <style>
+      .palindrome-true { color: #26CE5B }
+      .palindrome-false { color: red }
+    </style>
+  </head>
+  <body>
+		<div ng-controller="Ctrl">
+      <input type="text" ng-model="message" placeholder="enter your text" />
+      <h2>{{message}} <span class="palindrome-{{is_palindrome}}">{{isPalindrome(message)}}</span></h2>
+		</div>
+  </body>
+</html>
