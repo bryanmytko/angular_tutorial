@@ -1,0 +1,12 @@
+<div class="jumbotron" id="mainContainer">
+	<h2>Widget App</h2>
+	<br />
+	<div ng-show="is_error" class="alert alert-dismissable alert-danger">
+    {{error.login}}
+	</div>
+  <form ng-submit="login()">
+		<input required class="form-control" type="text" placeholder="Name" ng-model="user.name" />
+		<input required class="form-control" type="password" placeholder="Password" ng-model="user.password" />
+		<button class="btn btn-info">Login</button>
+  </form>
+</div>
